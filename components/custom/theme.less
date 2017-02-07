@@ -3,8 +3,121 @@
 @import "../../variables.less";
 @import "mediawiki.mixins";
 
-@media screen {
+/* Use circle-shaped bullet points */
+ul {
+    list-style-type: circle;
+    .list-style-image-svg('images/bullet-circle-icon.svg', 'images/bullet-circle-icon.png');
+}
+
+/* Disable user avatars */
+#userIcon20, #userIcon40, .username-space {
+    display: none;
+}
+
+/* Show the current user name in bold */
+#username-text {
+    font-weight: bold;
+}
+
+/* Align the user menu with the user button */
+@media screen and (min-width: 982px) {
+#p-personal {
+        right: 0 !important;
+}
+}
+
+#p-personal {
+        right: 0;
+}
+
+/* Set the footer background color to match the sidebar */
+#content {
+    padding-bottom: 0px;
+}
+
+#footer {
+    background-color: #f3f3f3;
+    margin: 24px -24px 0 -24px !important;
+    padding: 10px 24px 10px 24px !important;
+}
+
+#footer hr {
+    display: none;
+}
+
 /* Top Bar colour and hover colour start */
 
-/* Top Bar colour and hover colour */
+/* Primary color: #2f3e4f  */
+/* Secondary color: #577291 */
+
+#mw-page-base {
+        background-color: #2f3e4f !important;
+        background-image: none;
 }
+
+@media (max-width:768px) {
+#mw-page-base {
+        background-color: #2f3e4f;
+}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+#mw-page-base {
+        background-color: #2f3e4f;
+}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+#mw-page-base {
+        background-color: #2f3e4f;
+}
+}
+
+div.vectorTabs a:hover {
+        background-color: #577291;
+}
+
+div.onhoverbg:hover {
+        background-color: #577291;
+}
+
+img.downarrow:hover{
+        background-color: #577291;
+}
+
+div.vectorMenu:hover h5 a, div.vectorMenu:hover h5 span {
+        background-color: #577291;
+}
+
+div.vectorMenu h5 a, div.vectorMenu h5 span {
+        background-color: #2f3e4f;
+}
+
+div.vectorMenu:hover {
+        background-color: #577291;
+}
+
+div.vectorMenu ul {
+        border: solid 2px #2f3e4f;
+        border-top: none;
+
+}
+
+@media (max-width: 768px) {
+#hamburgerIcon:hover {
+        background-color: #577291;
+}
+
+img.editbutton:hover {
+        background-color: #577291;
+}
+
+div.actionmenu ul {
+        border-top: solid 2px #2f3e4f;
+}
+
+#left-navigation {
+        background-color: #2f3e4f;
+}
+
+/* Top Bar colour and hover colour */
