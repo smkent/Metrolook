@@ -1,10 +1,45 @@
 /* Add your custom theme overrides here */
 
-@import "../../variables.less";
 @import "mediawiki.mixins";
 
-@media screen {
-/* Top Bar colour and hover colour start */
+/* Use circle-shaped bullet points */
+ul {
+    list-style-type: disc;
+    list-style-image: none;
+}
 
-/* Top Bar colour and hover colour */
+/* Disable user avatars */
+#userIcon20, #userIcon40, .username-space {
+    display: none;
+}
+
+/* Show the current user name in bold */
+#username-text {
+    font-weight: bold;
+}
+
+/* Align the user menu with the user button */
+@media screen and (min-width: 982px) {
+    #p-personal {
+            right: 0 !important;
+    }
+}
+
+#p-personal {
+        right: 0;
+}
+
+/* Set the footer background color to match the sidebar */
+#content {
+    padding-bottom: 0px;
+}
+
+#footer {
+    background-color: #f3f3f3;
+    margin: 24px -24px 0 -24px !important;
+    padding: 10px 24px 5px 24px !important;
+}
+
+#footer hr {
+    display: none;
 }
